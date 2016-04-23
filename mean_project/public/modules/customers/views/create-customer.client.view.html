@@ -1,0 +1,117 @@
+<section data-ng-controller="CustomersCreateController as vm">
+	<div class="modal-header">
+		<h3 class="modal-title">new customer</h3>
+	</div>
+	<div class="modal-body">
+
+		<form name="createcustomerform">
+			<fieldset>
+
+
+
+		  <div class="row">
+	   <div class="col-sm-6 text-center" >
+
+		   <i class="glyphicon glyphicon-user cust-profile" ng-class="{'text-primary':vm.referred,'text-danger':!vm.referred}"></i>
+	   </div>
+	   <div class="col-sm-6">
+		   <div class="form-group">
+			<label class="control-label" for="firstname" >first name</label>
+			   <div class="controls">
+				   <input class="form-control" id="firstname" type="text" data-ng-model="vm.firstName" required>
+			   </div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" >sur name</label>
+					<div class="controls">
+						<input class="form-control" id="surname" type="text" data-ng-model="vm.surName" required>
+					</div>
+				</div>
+
+				  <div class="form-group">
+					  <label class="control-label" >suburb</label>
+					  <div class="controls">
+						  <input class="form-control" id="suburb" type="text" data-ng-model="vm.suburb">
+					  </div>
+				  </div>
+
+
+				  <div class="form-group">
+					  <label class="control-label" >country</label>
+					  <div class="controls">
+						  <input class="form-control" id="country" type="text" data-ng-model="vm.country">
+					  </div>
+				  </div>
+			  </div>
+			  </div>
+
+
+		  <div class="row">
+
+			  <div class="col-sm-6 col-sm-push-6">
+				  <div class="form-group">
+
+					  <label class="control-label" >email</label>
+					  <div class="controls">
+						  <input class="form-control" id="email" type="text" data-ng-model="vm.email">
+					  </div>
+				  </div>
+
+				  <div class="form-group">
+					  <label class="control-label" >phone</label>
+					  <div class="controls">
+						  <input class="form-control" id="phone" type="text" data-ng-model="vm.phone">
+					  </div>
+				  </div>
+
+
+
+			  </div>
+
+			<div class="col-sm-6 col-sm-pull-6">
+				<div class="form-group">
+					<label class="control-label" for="referred">referred</label>
+					<div class="controls">
+						<input name="referred" class="form-control checkbox-left" id="referred" type="checkbox" data-ng-model="vm.referred">
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="control-label" for="channel" >channel</label>
+					<div class="controls">
+						<input class="form-control" id="channel" type="text" data-ng-model="vm.channel">
+					</div>
+				</div>
+				</div>
+			  </div>
+	<div class="row">
+<div class="col-sm-6">
+				<div class="form-group">
+					<label class="control-label" for="industry" >industry</label>
+					<div class="controls">
+						<input class="form-control" id="industry" type="text" data-ng-model="vm.industry">
+					</div>
+					</div>
+	</div>
+
+
+
+		</div> <!-- 3rd row -->
+
+			</fieldset>
+
+
+		</form>
+	</div>
+
+
+	<div class="modal-footer">
+		<button class="btn btn-success" type="button" ng-click="vm.create(); ok()" ng-disabled="createcustomerform.$invalid">Create</button>
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+
+
+
+
+</section>
